@@ -146,58 +146,6 @@ body {
 	}
 }
 
-.text-style {
-	font-size: 15px;
-	line-height: 18.75px;
-	letter-spacing: 1px;
-	text-align: center;
-	color: rgba(0, 0, 0, 1);
-}
-
-.button-style {
-	position: relative;
-	font-size: 15px;
-	line-height: 23px;
-	letter-spacing: 0em;
-	text-align: center;
-	color: rgba(255, 255, 255, 1);
-	padding: 5px 47px;
-	background-color: rgba(255, 74, 50, 1);
-	border-radius: 35px;
-	margin: 0px 12px 0px 0px;
-	overflow: hidden;
-	z-index: 5;
-	transition: all 0.2s ease-in-out 0s;
-
-	&:last-child {
-		margin: 0px 0px 0px 0px;
-	}
-
-	&:before {
-		content: '';
-		background: linear-gradient(90deg, rgba(255, 166, 154, 1), rgba(255, 74, 50, 1));
-		height: 33px;
-		width: 30px;
-		position: absolute;
-		top: 0px;
-		left: -50%;
-		transform: skewX(-45deg);
-	}
-
-	&:hover {
-		transform: scale(1.03);
-	}
-
-	&:hover:before {
-		left: 110%;
-		transition: 0.5s ease-in-out 0s;
-	}
-
-	@media (max-width: $md4+px) {
-		margin: 0px 0px 10px 0px;
-	}
-}
-
 //</MAINBLOCK>====================================================================================================
 //<SPONSORS>====================================================================================================
 
@@ -336,37 +284,16 @@ body {
 		}
 	}
 
-	&__column {}
-}
+	&__column {
+		margin: 0px 20px 0px 0px;
 
-.shop-link {
-	position: relative;
-	margin: 0px 20px 0px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
 
-	&:last-child {
-		margin: 0px 0px 0px 0px;
-	}
-
-	@media (max-width: $md3+px) {
-		margin: 0px 0px 20px 0px;
-	}
-
-	&:after {
-		content: '';
-		transition: all 0.3s ease 0s;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background-color: rgba(255, 74, 50, 0.2);
-		opacity: 0;
-		visibility: hidden;
-	}
-
-	&:hover:after {
-		opacity: 1;
-		visibility: visible;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 }
 
@@ -385,7 +312,10 @@ body {
 	}
 
 	&__background {
+		overflow: hidden;
+
 		img {
+			transition: all 0.3s ease 0s;
 			width: 100%;
 		}
 	}
@@ -395,57 +325,230 @@ body {
 	}
 
 	&__title {
-		font-size: 25px;
-		line-height: 30px;
-		letter-spacing: 0em;
-		text-align: center;
-		color: rgba(255, 255, 255, 1);
 		margin: 0px 0px 15px 0px;
 	}
 
-	&__subtitle {
-		font-size: 18px;
-		line-height: 23px;
-		letter-spacing: 0em;
-		text-align: center;
-		color: rgba(255, 255, 255, 1);
-	}
+	&__subtitle {}
 }
 
 //</SHOP>====================================================================================================
 //<ELECTRIC>====================================================================================================
 
 .electric {
+	position: relative;
+	max-width: 100%;
+	height: 100vh;
 
 	&__container {}
 
 	&__body {}
 
-	&__background {}
+	&__background {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: -1;
 
-	&__content {}
+		img {
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
 
-	&__subtitle {}
+	&__content {
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 44px 5px 0px 5px;
+	}
+
+	&__subtitle {
+		margin: 0px 0px 11px 0px;
+	}
 
 	&__title {
+		max-width: 490px;
 		font-size: 45px;
 		font-weight: 700;
 		line-height: 51px;
 		letter-spacing: 0em;
 		text-align: center;
 		color: rgba(0, 0, 0, 1);
+		margin: 0px 0px 15px 0px;
 	}
 
-	&__text {}
+	&__text {
+		max-width: 490px;
+		margin: 0px 0px 20px 0px;
+	}
 
-	&__button {}
+	&__button {
+		padding: 5px 66px;
+	}
 }
 
-.ibg {}
-
-.text-style {}
-
-.button {}
-
-
 //</ELECTRIC>====================================================================================================
+//<BOOSTEDREV>====================================================================================================
+
+.boostedrev {
+
+	&__container {
+		max-width: 1210px;
+		margin: 0 auto;
+	}
+
+	&__content {
+		padding: 44px 0px 45px 0px;
+		margin: 0px 10px 0px 10px;
+	}
+
+	&__columns {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (max-width: $md2+px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__column {
+		margin: 0px 40px 0px 0px;
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+
+		@media (max-width: $md2+px) {
+			margin: 40px 0px 0px 0px;
+		}
+	}
+}
+
+.column-boostedrev {
+
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+
+		img {
+			width: 100%;
+		}
+
+		@media (max-width: 600px) {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		max-width: 340px;
+
+		@media (max-width: $md2+px) {
+			max-width: 740px;
+		}
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 38px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin: 0px 0px 21px 0px;
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 23px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin: 0px 0px 18px 0px;
+	}
+
+	&__button {
+		padding: 5px 16px;
+	}
+}
+
+//</BOOSTEDREV>====================================================================================================
+//<OTHERSHOP>====================================================================================================
+
+.othershop {
+	margin: 0px 0px 100px 0px;
+
+	&__columns {
+		display: flex;
+
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		flex: 0 1 33.3333%;
+	}
+}
+
+.column-othershop {
+	position: relative;
+	display: block;
+	height: 100%;
+
+	&__background {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		z-index: -1;
+		overflow: hidden;
+
+		img {
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 480px;
+	}
+
+	&__title {
+		z-index: 2;
+	}
+
+	&__subtitle {
+		z-index: 2;
+	}
+}
+
+//</OTHERSHOP>====================================================================================================
+//<VIDEO>====================================================================================================
+
+.video {
+
+	&__container {}
+
+	&__content {
+		display: flex;
+	}
+
+	&__item,
+	iframe{
+			width: 540px;
+	}
+
+}
+
+//</VIDEO>====================================================================================================
