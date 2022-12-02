@@ -481,7 +481,7 @@ body {
 //<OTHERSHOP>====================================================================================================
 
 .othershop {
-	margin: 0px 0px 100px 0px;
+	margin: 0px 0px 55px 0px;
 
 	&__columns {
 		display: flex;
@@ -536,19 +536,116 @@ body {
 //</OTHERSHOP>====================================================================================================
 //<VIDEO>====================================================================================================
 
-.video {
+.videoblock {
+	margin: 0px 0px 64px 0px;
 
-	&__container {}
+	&__container {
+		max-width: 1110px;
+		margin: 0 auto;
+	}
 
 	&__content {
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0px 5px;
+
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+		}
 	}
 
-	&__item,
-	iframe{
-			width: 540px;
+	&__item1,
+	&__item2 {
+		width: 100%;
+		height: 304px;
+		margin: 0px 20px 0px 0px;
+
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 20px 0px;
+		}
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	.video1,
+	.video2 {
+		width: 100%;
+		height: 304px;
 	}
 
 }
 
 //</VIDEO>====================================================================================================
+//<ACCESSORIES>====================================================================================================
+
+.accessories {
+	margin: 0px 0px 20px 0px;
+
+	&__container {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	&__content {}
+
+	&__items {
+		display: flex;
+	}
+
+	&__item {}
+}
+
+.item-accessories {
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__image {}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__name {
+		font-size: 15px;
+		line-height: 18px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: rgba(255, 74, 50, 1);
+	}
+
+	&__prices {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__price {}
+
+	&__status {}
+}
+
+
+//</ACCESSORIES>====================================================================================================
+//<SHADOWBLOCK>====================================================================================================
+
+.shadowblock {
+	margin: 0px 0px 28px 0px;
+	height: 66px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 2px 0px 10px 0px rgba(41, 44, 61, 0.34);
+}
+
+
+//</SHADOWBLOCK>====================================================================================================
