@@ -18,3 +18,40 @@ function ibg() {
 	}
 }
 ibg();
+
+$(document).ready(function () {
+	$('.accessories__items').slick({
+		infinite: true,
+		slidesToShow: 7,
+		slidesToScroll: 7,
+		speed: 500,
+		adaptiveHeight: true,
+		arrows: true,
+		pauseOnFocus: true,
+		//autoplay: true,
+		autoplaySpeed: 5000,
+		responsive: [
+			{
+				breakpoint: 1270,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 5,
+				}
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			},
+			{
+				breakpoint: 560,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+});

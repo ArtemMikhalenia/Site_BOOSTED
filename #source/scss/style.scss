@@ -582,20 +582,34 @@ body {
 //<ACCESSORIES>====================================================================================================
 
 .accessories {
-	margin: 0px 0px 20px 0px;
+	margin: 0px 0px 10px 0px;
 
 	&__container {
-		max-width: 1440px;
+		max-width: 1450px;
 		margin: 0 auto;
 	}
 
-	&__content {}
+	&__content {
+		margin: 0px 5px;
+	}
 
 	&__items {
 		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 0;
 	}
 
-	&__item {}
+	&__item {
+		display: flex;
+		width: 186px;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			transform: scale(1.03);
+			overflow: hidden;
+		}
+	}
 }
 
 .item-accessories {
@@ -605,16 +619,10 @@ body {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
+		flex: 1 1 auto;
 	}
 
 	&__image {}
-
-	&__content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
 
 	&__name {
 		font-size: 15px;
@@ -622,19 +630,83 @@ body {
 		letter-spacing: 0em;
 		text-align: center;
 		color: rgba(255, 74, 50, 1);
+		margin: 0px 0px 3px 0px;
 	}
 
 	&__prices {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 	}
 
-	&__price {}
+	&__price {
+		font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 0em;
+		text-align: center;
+		line-height: 18px;
+		letter-spacing: 0em;
+		color: rgba(55, 55, 55, 1);
+		margin: 0px 4px 0px 0px;
 
-	&__status {}
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	&__status {
+		font-size: 15px;
+		line-height: 18px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: rgba(0, 0, 0, 0.3);
+	}
 }
 
+.red-price {
+	color: rgba(255, 33, 33, 1);
+}
+
+.slider {
+	position: relative;
+}
+
+.slick-list {
+	overflow: hidden;
+}
+
+.slick-slide {
+	width: 186px;
+}
+
+.slick-track {
+	display: flex;
+}
+
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	font-size: 0;
+	width: 44px;
+	height: 44px;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		transform: scale(1.1);
+		overflow: hidden;
+	}
+}
+
+button.slick-prev.slick-arrow {
+	left: 0;
+	background: url('../img/Accessories/Arrow_left.png') 0 0 / 100% no-repeat;
+}
+
+button.slick-next.slick-arrow {
+	right: 0;
+	background: url('../img/Accessories/Arrow_right.png') 0 0 / 100% no-repeat;
+}
 
 //</ACCESSORIES>====================================================================================================
 //<SHADOWBLOCK>====================================================================================================
@@ -647,5 +719,85 @@ body {
 	box-shadow: 2px 0px 10px 0px rgba(41, 44, 61, 0.34);
 }
 
-
 //</SHADOWBLOCK>====================================================================================================
+//<ADVANTAGES>====================================================================================================
+
+.advantages {
+	background-color: rgba(0, 0, 0, 1);
+
+	&__container {
+		max-width: 1320px;
+		margin: 0 auto;
+	}
+}
+
+.advantage {
+
+	&__content {
+		padding: 35px 0px 50px 0px;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: $md3+px) {
+			display: block;
+		}
+	}
+
+	&__item {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0px 10px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 25px 0px;
+		}
+
+	}
+}
+
+.item-advantage {
+
+	&__icon {
+		display: inline-flex;
+
+		img {
+			width: 87px;
+			height: 87px;
+		}
+
+		margin: 0px 0px 5px 0px;
+	}
+
+	&__content {
+		max-width: 280px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__title {
+		font-size: 31px;
+		font-weight: 700;
+		line-height: 36px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: rgba(255, 255, 255, 1);
+		margin: 0px 0px 25px 0px;
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 23px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+
+//</ADVANTAGES>====================================================================================================
