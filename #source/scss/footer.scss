@@ -12,16 +12,24 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @media (max-width: $md3+px) {
+         flex-direction: column;
+      }
    }
 
    &__text {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 13px;
-      line-height: 19px;
-      letter-spacing: 0em;
-      text-align: left;
+      p {
+         display: inline-block;
+         font-size: 13px;
+         line-height: 19px;
+         letter-spacing: 0em;
+         text-align: left;
+      }
+
+      @media (max-width: $md3+px) {
+         padding: 0px 0px 10px 0px;
+      }
    }
 
    &__link {
@@ -34,10 +42,20 @@
 
    &__items {
       display: flex;
+
+      @media (max-width: $md4+px) {
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 3px;
+      }
    }
 
    &__item {
       margin: 0px 6px 0px 0px;
+
+      @media (max-width: $md4+px) {
+         margin: 0px 0px 0px 0px;
+      }
 
       &:last-child {
          margin: 0px 0px 0px 0px;
