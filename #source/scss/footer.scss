@@ -20,11 +20,10 @@
 
    &__text {
       p {
-         display: inline-block;
          font-size: 13px;
          line-height: 19px;
          letter-spacing: 0em;
-         text-align: left;
+         text-align: center;
       }
 
       @media (max-width: $md3+px) {
@@ -38,6 +37,10 @@
       letter-spacing: 0em;
       text-align: left;
       color: rgba(255, 74, 50, 1);
+
+      &:hover {
+         text-decoration: underline;
+      }
    }
 
    &__items {
@@ -46,19 +49,27 @@
       @media (max-width: $md4+px) {
          flex-wrap: wrap;
          justify-content: center;
-         gap: 3px;
       }
    }
 
    &__item {
-      margin: 0px 6px 0px 0px;
+      padding: 0px 6px 0px 0px;
+      transition: all 0.2s ease 0s;
+
+      &:hover {
+         transform: scale(1.05);
+      }
 
       @media (max-width: $md4+px) {
-         margin: 0px 0px 0px 0px;
+         padding: 0px 6px 5px 0px;
+
+         &:first-child {
+            padding: 0px 6px 0px 5px;
+         }
       }
 
       &:last-child {
-         margin: 0px 0px 0px 0px;
+         padding: 0px 0px 0px 0px;
       }
    }
 }
