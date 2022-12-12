@@ -282,6 +282,17 @@ span.line.bottomsecondelanim {
 	}
 }
 
+.content-othershop.scaleanim {
+	transform: scale(0);
+	opacity: 0;
+	transition: all 1s ease 0.4s;
+
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
 .column-shop__content.scaleanim {
 	transform: scale(0);
 	opacity: 0;
